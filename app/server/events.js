@@ -15,6 +15,7 @@ module.exports = (io) => {
 		else
 			console.log(user.name + ' connected')
 
+		// User disconnected
 	  socket.on('disconnect', () => {
 			if (user != null)
 				console.log(user.name + ' disconnected')

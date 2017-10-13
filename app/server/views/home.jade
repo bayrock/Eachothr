@@ -1,6 +1,10 @@
+
 extends layout
 
 block content
+	- user = typeof(udata) != 'undefined' ? udata : {}
+	
+
 	span(id='testspan')
 	
 	include components/nav

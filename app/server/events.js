@@ -13,12 +13,12 @@ module.exports = (io) => {
 		if (user == null)
 			console.log('Anon connected')
 		else
-			console.log(user.name + ' connected')
+			console.log(`${user.name} connected`)
 
 		// User disconnected
-	  socket.on('disconnect', () => {
+		socket.on('disconnect', () => {
 			if (user != null)
-				console.log(user.name + ' disconnected')
+				console.log(`${user.name} disconnected`)
 		})
 	})
 

@@ -3,14 +3,15 @@ Hesitate
 routes.js
 */
 
+const lobbies = require('./lobbies')
 const nickname = require('nicknames')
 const gravatar = require('gravatar')
 
 module.exports = (app) => {
 
 	app.get('/', (req, res) => {
-	  if (req.session.user == null) {
-			let randname = nickname.allRandom()
+		if (req.session.user == null) {
+			const randname = nickname.allRandom()
 
 			req.session.user = {
 				name: randname,
@@ -18,9 +19,12 @@ module.exports = (app) => {
 			}
 
 			console.log(req.session.user.name + ' was born')
-	  }
+		}
 
-		res.render('home', { udata: req.session.user })
+		res.render('home', {
+			userdata: req.session.user,
+			lobbydata: lobbies.data
+		})
 		res.end()
 	})
 }

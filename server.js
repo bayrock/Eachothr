@@ -38,3 +38,6 @@ io.use(sharedsession(session))
 
 // Abstract events to their own file
 require('./app/server/events')(io)
+
+// Initialize the game lobbies
+require('./app/server/lobbies').Init()

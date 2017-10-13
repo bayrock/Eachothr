@@ -2,12 +2,13 @@
 extends layout
 
 block content
-	- user = typeof(udata) != 'undefined' ? udata : {}
-	
-
-	span(id='testspan')
+	- user = typeof(userdata) != 'undefined' ? userdata : {}
+	- lobbies = typeof(lobbydata) != 'undefined' ? lobbydata : {}
 	
 	include components/nav
+	
+	- each lobby, name in lobbies 
+		p #{name} (Slots: #{lobby.getSlots()}, #{lobby.getOwner()})
 	
 	div.footer
 

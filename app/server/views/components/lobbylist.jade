@@ -1,0 +1,20 @@
+
+// Why don't Bootstrap table classes work?
+
+center
+	div.table-responsive
+		table.table-striped
+			//caption Lobby List
+			thead
+				tr
+					th Lobby
+					th Host
+					th 
+			tbody
+				each lobby, id in lobbies
+					tr
+						td #{lobby.getTitle()} 
+						td #{lobby.getOwner()}
+						td
+							- const lobbylink = `/lobby?id=${id+1}`
+							a(href=lobbylink).btn Join

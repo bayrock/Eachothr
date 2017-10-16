@@ -7,18 +7,13 @@ html, body {
 	word-wrap: break-word;
 	overflow-y: hidden;
 	/* Background */
-	background: #f2f9fe;
-	background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* FF3.6+ */;
-	background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* Chrome10+,Safari5.1+ */;
-	background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* Opera 12+ */;
-	background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* IE10+ */;
-	background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* W3C */;
+	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
 }
 
 /* Styling */
 
-#testspan {
-	padding-left: 10px;
+table, th, td {
+    border: 1px solid black;
 }
 
 #navform {

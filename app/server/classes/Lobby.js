@@ -1,23 +1,32 @@
 
 class Lobby {
-	constructor(title, slots, owner, mode) {
+	constructor(title, owner, mode) {
 		this.title = title
-		this.slots = slots
 		this.owner = owner ? owner : "Dedicated"
-		this.mode = mode ? mode : title
+
+		this.queue = {}
 
 		console.log(`Lobby - ${this.title} - was initialized by ${this.owner}`)
   }
 	// Getters
-	getTitle() { return	this.title }
-	getSlots() { return	this.slots }
-	getOwner() { return	this.owner }
-	getMode() { return this.mode }
+	getTitle() { return this.title }
+	getOwner() { return this.owner }
+
 	// Setters
-	setTitle(newtitle)	{	this.title = newtitle	}
+	setTitle(newtitle) { this.title = newtitle }
 
 	// Methods
-	// Functionality goes here
+	joinQueue(userdata) {
+		const name = userdata.name
+		this.queue[name] = name
+		//console.log(`${userdata.name} was added to ${this.title} queue`)
+	}
+
+	// TODO Why doesn't this work from events.js disconnect?
+	leaveQueue(userdata) {
+		delete this.queue[userdata.name]
+		//console.log(`${userdata.name} left the ${this.title} queue`)
+	}
 }
 
 module.exports = Lobby

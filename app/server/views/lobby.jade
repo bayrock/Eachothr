@@ -3,12 +3,11 @@ extends layout
 
 block content
 	- user = typeof(userdata) != 'undefined' ? userdata : {}
-	- lobbies = typeof(lobbydata) != 'undefined' ? lobbydata : {}
+	- lobby = typeof(lobbydata) != 'undefined' ? lobbydata : {}
 	
 	include components/nav
-	include components/lobbylist
 	
 	div.footer
 
 block scripts
-	script(src='/js/home.js' type='text/javascript')
+	script(src='/js/lobby.js' type='text/javascript')

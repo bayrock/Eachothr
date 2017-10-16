@@ -1,17 +1,19 @@
 doctype html
-html
+html(lang='en')
 	head
 
 		title Hesitate Prototype
-		meta(charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1.0')
-		link(rel='stylesheet', href='/vendor/bootstrap.min.css')
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
 		link(rel='stylesheet', href='/css/style.css')
-		script(src='/vendor/jquery-2.2.3.min.js')
-		script(src='/vendor/jquery.form.min.js')
+		link(rel='stylesheet', href='/vendor/bootstrap.min.css')
+		script(src='/vendor/jquery-3.2.1.min.js')
+		//script(src='/vendor/jquery.form.min.js')
 		script(src='/vendor/bootstrap.min.js')
 		script(src='https://cdn.socket.io/socket.io-1.4.5.js')
 
 	body
-
+			
 		block content
 		block scripts

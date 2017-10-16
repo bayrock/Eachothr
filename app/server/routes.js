@@ -1,5 +1,5 @@
 /*
-Hesitate
+Eachothr
 routes.js
 */
 
@@ -7,7 +7,8 @@ const lobbies = require('./lobbies')
 const nickname = require('nicknames')
 const gravatar = require('gravatar')
 
-let takennicks = []
+// TODO delete names upon disconnect
+const takennicks = []
 
 function validateSession(req) {
 	if (req.session.user != null) return

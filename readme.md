@@ -1,5 +1,5 @@
-# Hesitate
-A web app encompassing lobby based IO games.
+# Eachothr
+Play lobby based IO games with eachother.
 
 ### Built on top of the following technologies:
 

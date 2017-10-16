@@ -1,6 +1,7 @@
 
+/* Mandatory housekeeping */
+
 html, body {
-	/* Mandatory housekeeping */
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -13,7 +14,7 @@ html, body {
 /* Styling */
 
 table, th, td {
-    border: 1px solid black;
+	border: 1px solid black;
 }
 
 #navform {

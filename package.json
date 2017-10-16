@@ -1,10 +1,10 @@
 {
-  "name": "hesitate",
+  "name": "eachothr",
   "version": "1.0.0",
   "description": "A web app encompassing lobby based IO games.",
   "scripts": {},
   "keywords": [
-    "hesitate"
+    "eachothr"
   ],
   "author": "Bayrock",
   "license": "AGPL-3",
